@@ -66,16 +66,24 @@ codeImg.setAttribute('src', siteContent["cta"]["img-src"])
 
 // Main Content //
 const mainText = document.getElementsByTagName('h4');
+  mainText[0].textContent = siteContent['main-content'] ['features-h4']
+  mainText[1].textContent = siteContent['main-content'] ['about-h4']
+  mainText[2].textContent = siteContent['main-content'] ['services-h4']
+  mainText[3].textContent = siteContent['main-content'] ['product-h4']
+  mainText[4].textContent = siteContent['main-content'] ['vision-h4']
 
-mainText[0].textContent = siteContent['main-content'] ['features-h4']
-mainText[1].textContent = siteContent['main-content'] ['about-h4']
-mainText[2].textContent = siteContent['main-content'] ['services-h4']
-mainText[3].textContent = siteContent['main-content'] ['product-h4']
-mainText[4].textContent = siteContent['main-content'] ['vision-h4']
+const paragraphText = document.getElementsByTagName('p');
+  paragraphText[0].textContent = siteContent['main-content']['features-content']
+  paragraphText[1].textContent = siteContent['main-content']['about-content']
+  paragraphText[2].textContent = siteContent['main-content']['services-content']
+  paragraphText[3].textContent = siteContent['main-content']['product-content']
+  paragraphText[4].textContent = siteContent['main-content']['vision-content']
 
 
 const middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
 
 
 // Contact //
