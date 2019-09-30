@@ -41,3 +41,44 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// Nav Bar //
+const navItem = document.getElementsByTagName('a');
+navItem[0].textContent = "Services"
+navItem[1].textContent = "Product"
+navItem[2].textContent = "Features"
+navItem[3].textContent = "About"
+navItem[4].textContent = "Contact"
+
+
+
+// CTA //
+
+const ctaOne = document.querySelector('.cta-text h1');
+ctaOne.textContent = 'Dom is Awesome';
+
+const btn = document.querySelector('button');
+btn.textContent = 'Get Started';
+
+const codeImg = document.getElementById("cta-img");
+codeImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+
+// Main Content //
+const mainText = document.getElementsByTagName('h4');
+
+mainText[0].textContent = siteContent['main-content'] ['features-h4']
+mainText[1].textContent = siteContent['main-content'] ['about-h4']
+mainText[2].textContent = siteContent['main-content'] ['services-h4']
+mainText[3].textContent = siteContent['main-content'] ['product-h4']
+mainText[4].textContent = siteContent['main-content'] ['vision-h4']
+
+
+const middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
+
+
+// Contact //
+
+// Footer //
+
