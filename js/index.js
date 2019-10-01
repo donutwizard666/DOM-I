@@ -45,7 +45,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 // Nav Bar //
 let links = document.querySelectorAll('a');
 for (let i = 0; i < links.length; i++) {
-  links[i].textContent = siteContent.nav[`nav-item-${i + 1}`]; //siteContent = where ALL the info we want is stored *.nav*  is the child, where our links are stored. *[nav-item-* is the start of each item in the nav bar that we want, the only differ in the last part, which is where a string template literal comes into play, our loop is adding 1 each time, because we told it to, for as long as the links.length is. ${i + 1} is we told it to start on 0, which is our first item, and go up by 1, and each time, it is 'returning' nav-item-1 then nav-item-2 and so on
+  links[i].textContent = siteContent.nav[`nav-item-${i + 1}`]; 
+  //siteContent = where ALL the info we want is stored *.nav*  is the child, where our links are stored. *[nav-item-* is the start of each item in the nav bar that we want, the only differ in the last part, which is where a string template literal comes into play, our loop is adding 1 each time, because we told it to, for as long as the links.length is. ${i + 1} is we told it to start on 0, which is our first item, and go up by 1, and each time, it is 'returning' nav-item-1 then nav-item-2 and so on
 }
 
 links.forEach( a => {
@@ -65,6 +66,7 @@ newElementTwo.textContent = 'News';
 newElementTwo.href="#";
 
 parentElement.prepend(newElementTwo);
+
 
 
 
