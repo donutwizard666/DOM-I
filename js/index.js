@@ -43,12 +43,28 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // Nav Bar //
-const navItem = document.getElementsByTagName('a');
-navItem[0].textContent = "Services"
-navItem[1].textContent = "Product"
-navItem[2].textContent = "Features"
-navItem[3].textContent = "About"
-navItem[4].textContent = "Contact"
+let links = document.querySelectorAll('a');
+for (let i = 0; i < links.length; i++) {
+  links[i].textContent = siteContent.nav[`nav-item-${i + 1}`]; //siteContent = where ALL the info we want is stored *.nav*  is the child, where our links are stored. *[nav-item-* is the start of each item in the nav bar that we want, the only differ in the last part, which is where a string template literal comes into play, our loop is adding 1 each time, because we told it to, for as long as the links.length is. ${i + 1} is we told it to start on 0, which is our first item, and go up by 1, and each time, it is 'returning' nav-item-1 then nav-item-2 and so on
+}
+
+links.forEach( a => {
+  a.style.color = 'green';
+});
+
+const parentElement = document.querySelector('nav');
+
+const newElement = document.createElement('a');
+  newElement.textContent = 'Blog';
+  newElement.href="#";
+
+parentElement.append(newElement);
+
+const newElementTwo = document.createElement('nav');
+newElementTwo.textContent = 'News';
+newElementTwo.href="#";
+
+parentElement.prepend(newElementTwo);
 
 
 
@@ -62,6 +78,7 @@ btn.textContent = 'Get Started';
 
 const codeImg = document.getElementById("cta-img");
 codeImg.setAttribute('src', siteContent["cta"]["img-src"])
+codeImg.alt = "image of code snippet";
 
 
 // Main Content //
@@ -78,15 +95,25 @@ const paragraphText = document.getElementsByTagName('p');
   paragraphText[2].textContent = siteContent['main-content']['services-content']
   paragraphText[3].textContent = siteContent['main-content']['product-content']
   paragraphText[4].textContent = siteContent['main-content']['vision-content']
+  
 
 
 const middleImg = document.getElementById('middle-img');
 middleImg.setAttribute('src', siteContent['main-content']['middle-img-src'])
-
+middleImg.alt = "code across screen";
 
 
 
 // Contact //
 
+const contact = document.querySelector('.contact');
+contact.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4']
+contact.getElementsByTagName('p')[0].textContent = siteContent['contact']['address']
+contact.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone']
+contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email']
+
 // Footer //
+
+const footer = document.querySelector('footer');
+  footer.textContent = 'Copyright Great Idea! 2018';
 
