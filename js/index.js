@@ -61,7 +61,7 @@ const newElement = document.createElement('a');
 
 parentElement.append(newElement);
 
-const newElementTwo = document.createElement('nav');
+const newElementTwo = document.createElement('a');
 newElementTwo.textContent = 'News';
 newElementTwo.href="#";
 
@@ -110,6 +110,7 @@ middleImg.alt = "code across screen";
 
 const contact = document.querySelector('.contact');
 contact.getElementsByTagName('h4')[0].textContent = siteContent['contact']['contact-h4']
+contact.getElementsByTagName('p')[0].textContent = siteContent['contact']['address']
 contact.getElementsByTagName('p')[0].textContent = siteContent['contact']['address']
 contact.getElementsByTagName('p')[1].textContent = siteContent['contact']['phone']
 contact.getElementsByTagName('p')[2].textContent = siteContent['contact']['email']
